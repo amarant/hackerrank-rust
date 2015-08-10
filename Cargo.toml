@@ -30,3 +30,7 @@ path = "src/algorithms/warmup/staircase.rs"
 [[bin]]
 name = "time_conversion"
 path = "src/algorithms/warmup/time_conversion.rs"
+
+[[bin]]
+name = "library_fine"
+path = "src/algorithms/warmup/library_fine.rs"
