@@ -1,0 +1,32 @@
+[package]
+name = "hackerrank"
+version = "0.1.0"
+authors = ["Arnaud M <arnaudmarant@gmail.com>"]
+
+[[bin]]
+name = "solve_me_first"
+path = "src/algorithms/warmup/solve_me_first.rs"
+
+[[bin]]
+name = "solve_me_second"
+path = "src/algorithms/warmup/solve_me_second.rs"
+
+[[bin]]
+name = "a_very_big_sum"
+path = "src/algorithms/warmup/a_very_big_sum.rs"
+
+[[bin]]
+name = "diagonal_difference"
+path = "src/algorithms/warmup/diagonal_difference.rs"
+
+[[bin]]
+name = "plus_minus"
+path = "src/algorithms/warmup/plus_minus.rs"
+
+[[bin]]
+name = "staircase"
+path = "src/algorithms/warmup/staircase.rs"
+
+[[bin]]
+name = "time_conversion"
+path = "src/algorithms/warmup/time_conversion.rs"
