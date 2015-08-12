@@ -3,6 +3,9 @@ name = "hackerrank"
 version = "0.1.0"
 authors = ["Arnaud M <arnaudmarant@gmail.com>"]
 
+[dependencies]
+num = "*"
+
 [[bin]]
 name = "solve_me_first"
 path = "src/algorithms/warmup/solve_me_first.rs"
@@ -38,3 +41,7 @@ path = "src/algorithms/warmup/library_fine.rs"
 [[bin]]
 name = "caesar_cipher"
 path = "src/algorithms/warmup/caesar_cipher.rs"
+
+[[bin]]
+name = "extra_long_factorials"
+path = "src/algorithms/warmup/extra_long_factorials.rs"
