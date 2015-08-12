@@ -45,3 +45,7 @@ path = "src/algorithms/warmup/caesar_cipher.rs"
 [[bin]]
 name = "extra_long_factorials"
 path = "src/algorithms/warmup/extra_long_factorials.rs"
+
+[[bin]]
+name = "fibonacci_modified"
+path = "src/algorithms/dynamic_programming/fibonacci_modified.rs"
