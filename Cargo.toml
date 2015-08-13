@@ -53,3 +53,7 @@ path = "src/algorithms/dynamic_programming/fibonacci_modified.rs"
 [[bin]]
 name = "the_maximum_subarray"
 path = "src/algorithms/dynamic_programming/the_maximum_subarray.rs"
+
+[[bin]]
+name = "the_coin_change_problem"
+path = "src/algorithms/dynamic_programming/the_coin_change_problem.rs"
