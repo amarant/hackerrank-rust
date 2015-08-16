@@ -57,3 +57,7 @@ path = "src/algorithms/dynamic_programming/the_maximum_subarray.rs"
 [[bin]]
 name = "the_coin_change_problem"
 path = "src/algorithms/dynamic_programming/the_coin_change_problem.rs"
+
+[[bin]]
+name = "candies"
+path = "src/algorithms/dynamic_programming/candies.rs"
