@@ -1,53 +1,18 @@
 use std::io;
 use std::io::BufRead;
-use std::cmp::Ordering;
 
 fn candies(ratings: &Vec<i32>) -> i32 {
-	//println!("ratings:");
-	//println!("{:?}", ratings);
-	let mut last_candies = 1i32;
-	let mut last_rating = ratings[0];
-	let mut candies = Vec::with_capacity(ratings.len());
-	candies.push(1);
-	for index in 1..ratings.len() {
-		let current_rating = ratings[index];
-		match (current_rating).cmp(&last_rating) {
-            Ordering::Less => {
-            	if last_candies == 1 {
-            		//println!("candies:");
-            		//println!("{:?}", candies);
-
-					let mut next_rating = current_rating;
-					let mut next_candy = 1;
-					for backward_index in (0..index).rev() {
-	            		let mut current_candy = candies[backward_index];
-            			let current_rating = ratings[backward_index];
-						
-						// println!("rating:{:?}, candy:{:?}", 
-						// 	current_rating, current_candy);
-						if current_rating > next_rating
-							&& current_candy <= next_candy {
-								current_candy = next_candy + 1;
-							}
-						candies[backward_index] = current_candy;	
-				        next_candy = current_candy;
-            			next_rating = current_rating;
-					}
-            	}
-            	last_candies = 1;
-            },
-            Ordering::Equal => {
-            	last_candies = 1;
-            },
-            Ordering::Greater => {
-				last_candies += 1;
-            },
-        }
-    	candies.push(last_candies);
-		last_rating = current_rating;
+	let mut candies = vec![1i32; ratings.len()];
+	for i in 1..ratings.len() {
+		if ratings[i] > ratings[i-1] {
+			candies[i] = candies[i-1] + 1;
+		}
 	}
-	//println!("candies:");
-	//println!("{:?}", candies);
+	for i in (1..ratings.len()).rev() {
+		if ratings[i-1] > ratings[i] {
+			candies[i-1] = std::cmp::max(candies[i-1], candies[i] + 1);
+		}
+	}
 	candies.iter().fold(0, |sum, i| sum + *i)
 }
 
