@@ -61,3 +61,7 @@ path = "src/algorithms/dynamic_programming/the_coin_change_problem.rs"
 [[bin]]
 name = "candies"
 path = "src/algorithms/dynamic_programming/candies.rs"
+
+[[bin]]
+name = "stock_maximize"
+path = "src/algorithms/dynamic_programming/stock_maximize.rs"
