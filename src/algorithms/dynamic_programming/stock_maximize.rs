@@ -4,11 +4,11 @@ use std::io::BufRead;
 fn stock_maximize(stock_values: &Vec<i64>) -> i64 {
     let mut money = 0i64;
     let mut current_max = *stock_values.last().unwrap();
-    for i in (0..stock_values.len()).rev() {
-        if stock_values[i] <= current_max {
-            money += current_max - stock_values[i];
+    for stock_values in stock_values.iter().rev() {
+        if *stock_values <= current_max {
+            money += current_max - stock_values;
         } else {
-            current_max = stock_values[i];
+            current_max = *stock_values;
         }
     }
     money
