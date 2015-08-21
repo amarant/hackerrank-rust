@@ -65,3 +65,7 @@ path = "src/algorithms/dynamic_programming/candies.rs"
 [[bin]]
 name = "stock_maximize"
 path = "src/algorithms/dynamic_programming/stock_maximize.rs"
+
+[[bin]]
+name = "maximise_sum"
+path = "src/algorithms/search/maximise_sum.rs"
